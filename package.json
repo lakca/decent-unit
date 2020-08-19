@@ -1,0 +1,30 @@
+{
+  "name": "@lakca/decent-unit",
+  "version": "0.0.1",
+  "description": "Decent conversion of measurement units.",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover mocha -- --reporter spec --bail --check-leaks test/ --exit",
+    "ci": "npm test && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lakca/decent-unit.git"
+  },
+  "keywords": [
+    "unit",
+    "conversion",
+    "decent"
+  ],
+  "author": "lakca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lakca/decent-unit/issues"
+  },
+  "homepage": "https://github.com/lakca/decent-unit#readme",
+  "devDependencies": {
+    "codecov": "^3.7.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.1.1"
+  }
+}
