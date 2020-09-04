@@ -14,16 +14,20 @@ const decentUnit = require('@lakca/decent-unit')
 ## Example
 
 ```js
-decentUnit(2 * 1024 ** 3) // decent result: { value: 2, unit: 'G' }
+// decent result: { value: 2, unit: 'G' }
+decentUnit(2 * 1024 ** 3)
 
-decentUnit(2 * 1024 ** 3, { fromUnit: 'G' }) // decent result: { value: 2, unit: 'E' }
+// decent result: { value: 2, unit: 'E' }
+decentUnit(2 * 1024 ** 3, { fromUnit: 'G' })
 
-decentUnit(2 * 1000 ** 3, { fromUnit: 'G', radix: 1000 }) // decent result { value: 2, unit: 'E' }
+// decent result { value: 2, unit: 'E' }
+decentUnit(2 * 1000 ** 3, { fromUnit: 'G', radix: 1000 })
 
-decentUnit(20000, { fromUnit: '', radix: [100, 20, 10, 2], units: ['', 'K', 'M', 'G', 'T'] }) // decent result { value: 1, unit: 'G' }
- *
+// decent result { value: 1, unit: 'G' }
+decentUnit(20000, { fromUnit: '', radix: [100, 20, 10, 2], units: ['', 'K', 'M', 'G', 'T'] })
 
-decentUnit(2 * 1024 ** 3, { fromUnit: 'G', toUnit: 'P' }) // expected result { value: 2048, unit: 'P' }
+// expected result { value: 2048, unit: 'P' }
+decentUnit(2 * 1024 ** 3, { fromUnit: 'G', toUnit: 'P' })
 ```
 
 More in [test](test/main.js).
@@ -38,7 +42,7 @@ More in [test](test/main.js).
 
 #### `{T} [options.toUnit]`
 
-> target unit.
+> target unit, if empty, decent unit will be returned.
 
 #### `{number|number[]} [options.radix=1024]`
 
